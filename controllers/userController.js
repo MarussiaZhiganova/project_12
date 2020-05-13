@@ -6,7 +6,7 @@ const usersPath = path.join(__dirname, '../data/users.json');
 module.exports.getUser = (req, res) => {
   fs.readFile(usersPath, { encoding: 'utf8' }, (err, data) => {
     if (err) {
-      return res.status(500).send('err');
+      return res.status(500).send({ message: 'Произошла ошибка при чтении файла' });
     }
     let users;
     try {
@@ -26,7 +26,7 @@ module.exports.getUser = (req, res) => {
 module.exports.getUsers = (req, res) => {
   fs.readFile(usersPath, { encoding: 'utf8' }, (err, data) => {
     if (err) {
-      return res.status(500).send('err');
+      return res.status(500).send({ message: 'Произошла ошибка при чтении файла' });
     }
     let users;
     try {
