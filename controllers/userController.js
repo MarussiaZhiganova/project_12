@@ -1,3 +1,4 @@
+/* eslint-disable consistent-return */
 const fs = require('fs');
 const path = require('path');
 
@@ -15,6 +16,7 @@ module.exports.getUser = (req, res) => {
       console.error(e);
       return res.status(400).send('Bad json format');
     }
+    // eslint-disable-next-line no-underscore-dangle
     const user = users.find((u) => u._id === req.params.id);
     if (!user) {
       return res.status(404).send({ message: 'Нет пользователя с таким id' });

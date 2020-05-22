@@ -15,3 +15,9 @@ node_modules
 
 # Visual Studio files
 .vscode
+
+# text files
+*.txt
+
+# archives
+*.zip
