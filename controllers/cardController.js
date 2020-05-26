@@ -1,4 +1,3 @@
-/* eslint-disable consistent-return */
 const fs = require('fs');
 const path = require('path');
 
@@ -20,5 +19,6 @@ module.exports.getCards = (req, res) => {
       return res.status(404).send({ message: 'Нет карточки' });
     }
     res.status(200).send(cards);
+    return false;
   });
 };
